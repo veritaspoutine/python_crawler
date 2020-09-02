@@ -56,8 +56,6 @@ ajax_link = 'https://www.104.com.tw/job/ajax/content/703tv'
 ajax_headers = {
        'Referer':'https://www.104.com.tw/job/703tv',
        'User-Agent' : 'Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0',
-       
-
 }
 
 job_req = requests.get(url=ajax_link, headers = ajax_headers)
@@ -86,5 +84,10 @@ other_list = []
 other_list.append(data_condition['other'])
 print(other_list)
 
-
-#df = pd.DataFrame('工具', '技能', '其他')
+'''
+Data Frame setup
+'''
+columns_title = ['職位','公司', '工具', '技能', '其他']
+row_data = []
+df = pd.DataFrame()
+print(df)
